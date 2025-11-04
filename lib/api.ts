@@ -25,7 +25,7 @@ const API_ENDPOINT = BASE_URL || 'http://localhost:3000/posts';
  */
 async function fetcher<T>(url: string): Promise<T> {
   // Use 'no-store' cache to ensure we always hit the API for fresh content.
-  const response = await fetch(url, { cache: 'no-store' }); 
+  const response = await fetch(url, { next: { revalidate: 3600 } }); 
   
   if (!response.ok) {
     // Throw error with more detail for better debugging
