@@ -1,5 +1,6 @@
 import { getPostById, getAllPosts } from '../../../lib/api'; // NOTE: Added getAllPosts import
 import { notFound } from 'next/navigation'; // For handling 404/not found cases
+import Link from 'next/link';
 
 // Define the Post interface locally for type safety, ensuring it matches your Rails model
 interface Post {
@@ -108,9 +109,9 @@ const PostPage = async ({ params }: PostPageProps) => {
         
         {/* Back Link */}
         <div className="mt-12 pt-6 border-t border-gray-200">
-            <a href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 flex items-center">
+            <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 flex items-center">
                 &larr; Back to all posts
-            </a>
+            </Link>
         </div>
 
       </div>
