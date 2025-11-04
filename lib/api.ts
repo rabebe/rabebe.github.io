@@ -1,5 +1,3 @@
-// lib/api.ts
-
 /**
  * Interface (Type Definition) for a Blog Post.
  * Note: These fields should match the JSON output structure from your Rails /posts endpoint.
@@ -13,10 +11,13 @@ export interface Post {
   updated_at: string;  // ISO Date string
 }
 
-// !!! IMPORTANT: This is the URL for your Rails API !!!
-// For local development, it assumes your Rails server is running on port 3000.
-// You MUST update this when you deploy your Rails API.
-const BASE_URL = 'http://localhost:3000/posts'; 
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; 
+
+if (!BASE_URL) {
+  console.warn("NEXT_PUBLIC_API_BASE_URL is not set. Defaulting to http://localhost:3000/posts");
+}
+
+const API_ENDPOINT = BASE_URL || 'http://localhost:3000/posts';
 
 /**
  * A reusable fetcher utility to handle the API request.
@@ -27,7 +28,9 @@ async function fetcher<T>(url: string): Promise<T> {
   const response = await fetch(url, { cache: 'no-store' }); 
   
   if (!response.ok) {
-    throw new Error(`API call failed: ${response.statusText} (${response.status})`);
+    // Throw error with more detail for better debugging
+    const errorBody = await response.text();
+    throw new Error(`API call failed for ${url}: ${response.status} ${response.statusText}. Body: ${errorBody}`);
   }
   
   // Cast the JSON response to the expected type T (e.g., Post or Post[])
@@ -39,7 +42,7 @@ async function fetcher<T>(url: string): Promise<T> {
  */
 export async function getAllPosts(): Promise<Post[]> {
   try {
-    const posts = await fetcher<Post[]>(BASE_URL);
+    const posts = await fetcher<Post[]>(API_ENDPOINT);
     return posts;
   } catch (error) {
     console.error("Error fetching all posts:", error);
@@ -53,7 +56,7 @@ export async function getAllPosts(): Promise<Post[]> {
  */
 export async function getPostById(id: number): Promise<Post | null> {
   try {
-    const url = `${BASE_URL}/${id}`;
+    const url = `${API_ENDPOINT}/${id}`;
     const post = await fetcher<Post>(url); 
     return post;
   } catch (error) {

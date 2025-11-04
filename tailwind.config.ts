@@ -9,14 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // You can define custom colors, fonts, or spacing here
       fontFamily: {
-        // Sets 'Inter' as the default sans-serif font
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
         primary: {
-          '500': '#4f46e5', // A nice indigo/violet color for accents
+          '500': '#4f46e5',
         },
       }
     },
