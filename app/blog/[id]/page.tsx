@@ -89,7 +89,8 @@ const PostPage = async ({ params }: PostPageProps) => {
 
         {/* Post Body - Renders Markdown using the new component */}
         <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-          <FormattedContent content={post.body} />
+          {/* CRITICAL CHANGE: ACTIVATE DEBUG MODE */}
+          <FormattedContent content={post.body} isDebug={false} /> 
         </article>
         
         {/* Back Link */}
