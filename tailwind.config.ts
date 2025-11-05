@@ -1,4 +1,6 @@
 import type { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
+
 
 const config: Config = {
   // Define which directories Tailwind should scan for utility classes (e.g., 'flex', 'p-4')
@@ -19,7 +21,9 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    typography,
+  ],
 };
 
 export default config;
