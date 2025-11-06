@@ -39,7 +39,7 @@ const BlogPage = async () => {
             The Blog
           </h1>
           <p className="text-xl text-indigo-400 max-w-3xl mx-auto">
-            A space for reflections I wrote while building this project, powered by my own blog API.          </p>
+            A space for reflections I wrote while building my most recent projects, powered by my own blog API.          </p>
         </header>
 
         {/* Post Grid */}
