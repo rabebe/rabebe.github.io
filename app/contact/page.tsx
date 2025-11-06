@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 'use client'; 
 
 import React from 'react';
@@ -35,55 +34,69 @@ const ContactPage: React.FC = () => {
   const githubUrl = "https://github.com/rabebe";
 
   return (
-    <main className="min-h-screen bg-gray-50 py-16 sm:py-24">
+    // Removed bg-gray-50 to inherit dark background
+    <main className="min-h-screen py-16 sm:py-24">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+          {/* Changed text-gray-900 to text-white */}
+          <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4">
             Get In Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          {/* Changed text-gray-600 to text-gray-300 */}
+          <p className="text-xl text-indigo-400 max-w-2xl mx-auto">
             Feel free to connect directly via these channels.
           </p>
         </header>
 
         {/* Static Contact Info Container */}
-        <div className="bg-white p-8 md:p-12 shadow-2xl rounded-2xl border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Direct Contact Methods</h2>
+        {/* Changed bg-white to bg-gray-800, border-gray-100 to border-gray-700 */}
+        <div className="bg-gray-800 p-8 md:p-12 shadow-2xl rounded-2xl border border-gray-700">
+            {/* Changed text-gray-900 to text-white */}
+            <h2 className="text-2xl font-bold text-white mb-8">Direct Contact Methods</h2>
             
             <div className="space-y-8">
                 
                 {/* Email Link */}
-                <div className="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200">
-                    <MailIcon className="w-8 h-8 text-teal-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                {/* Changed bg-gray-50 to bg-gray-700, border-gray-200 to border-gray-600 */}
+                <div className="flex items-start p-4 bg-gray-700 rounded-lg border border-gray-600">
+                    {/* *** Changed text-teal-400 to text-indigo-400 *** */}
+                    <MailIcon className="w-8 h-8 text-indigo-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Email Address</h3>
+                    {/* Changed text-gray-900 to text-white */}
+                    <h3 className="text-lg font-semibold text-white">Email Address</h3>
                     <a 
                         href={`mailto:${myEmail}`} 
-                        className="text-teal-600 hover:text-teal-800 transition duration-150 break-words font-medium"
+                        // *** Changed text-teal-400/hover:text-teal-300 to indigo ***
+                        className="text-indigo-400 hover:text-indigo-300 transition duration-150 break-words font-medium"
                     >
                         {myEmail}
                     </a>
-                    <p className="mt-1 text-sm text-gray-500">
+                    {/* Changed text-gray-500 to text-gray-400 */}
+                    <p className="mt-1 text-sm text-gray-400">
                         The best way to reach me for professional inquiries.
                     </p>
                     </div>
                 </div>
 
                 {/* Social Media Links */}
-                <div className="space-y-4 pt-4 border-t border-gray-100">
+                {/* Changed border-gray-100 to border-gray-700 */}
+                <div className="space-y-4 pt-4 border-t border-gray-700">
                     
                     {/* LinkedIn */}
                     <a 
                       href={linkedinUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="flex items-center text-gray-700 p-3 rounded-lg hover:bg-gray-100 transition duration-150 group"
+                      // Changed text-gray-700 to text-gray-300, hover:bg-gray-100 to hover:bg-gray-700
+                      className="flex items-center text-gray-300 p-3 rounded-lg hover:bg-gray-700 transition duration-150 group"
                     >
-                      <LinkedinIcon className="w-6 h-6 mr-4 flex-shrink-0 text-blue-600 group-hover:text-blue-700" />
+                      {/* *** Changed text-blue-500/group-hover:text-blue-400 to indigo *** */}
+                      <LinkedinIcon className="w-6 h-6 mr-4 flex-shrink-0 text-indigo-400 group-hover:text-indigo-300" />
                       <span className="font-medium text-lg">LinkedIn</span>
-                      <span className="ml-auto text-base text-gray-500 group-hover:text-teal-600 group-hover:underline">/ruth-abebe</span>
+                      {/* Changed text-gray-500 to text-gray-400 and *** group-hover:text-teal-400 to indigo *** */}
+                      <span className="ml-auto text-base text-gray-400 group-hover:text-indigo-400 group-hover:underline">/ruth-abebe</span>
                     </a>
                     
                     {/* GitHub */}
@@ -91,11 +104,14 @@ const ContactPage: React.FC = () => {
                       href={githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="flex items-center text-gray-700 p-3 rounded-lg hover:bg-gray-100 transition duration-150 group"
+                      // Changed text-gray-700 to text-gray-300, hover:bg-gray-100 to hover:bg-gray-700
+                      className="flex items-center text-gray-300 p-3 rounded-lg hover:bg-gray-700 transition duration-150 group"
                     >
-                      <GithubIcon className="w-6 h-6 mr-4 flex-shrink-0 text-gray-800 group-hover:text-black" />
+                      {/* *** Changed text-white/group-hover:text-white to indigo *** */}
+                      <GithubIcon className="w-6 h-6 mr-4 flex-shrink-0 text-indigo-400 group-hover:text-indigo-300" />
                       <span className="font-medium text-lg">GitHub</span>
-                      <span className="ml-auto text-base text-gray-500 group-hover:text-teal-600 group-hover:underline">/rabebe</span>
+                      {/* Changed text-gray-500 to text-gray-400 and *** group-hover:text-teal-400 to indigo *** */}
+                      <span className="ml-auto text-base text-gray-400 group-hover:text-indigo-400 group-hover:underline">/rabebe</span>
                     </a>
 
                 </div>

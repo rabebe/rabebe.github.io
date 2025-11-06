@@ -74,27 +74,27 @@ const PostPage = async ({ params }: PostPageProps) => {
     : 'Date Unavailable';
 
   return (
-    <main className="min-h-screen bg-gray-50 py-16 sm:py-24">
+    <main className="min-h-screen py-16 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Post Header */}
-        <header className="mb-10 border-b border-gray-300 pb-6">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-4 leading-tight">
+        <header className="mb-10 pb-6 ">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-white">
             {post.title}
           </h1>
-          <p className="text-lg text-gray-500">
+          <p className="text-lg text-indigo-400">
             Published on <time dateTime={dateToDisplay || ''}>{formattedDate}</time>
           </p>
         </header>
 
         {/* Post Body - Renders Markdown using the new component */}
-        <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+        <article className="prose prose-lg max-w-none leading-relaxed prose-invert text-white prose-headings:text-white">
           {/* CRITICAL CHANGE: ACTIVATE DEBUG MODE */}
           <FormattedContent content={post.body} isDebug={false} /> 
         </article>
         
         {/* Back Link */}
-        <div className="mt-12 pt-6 border-t border-gray-200">
+        <div className="mt-12 pt-6">
             <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-150 flex items-center">
                 &larr; Back to all posts
             </Link>

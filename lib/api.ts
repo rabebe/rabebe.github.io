@@ -6,9 +6,8 @@ export interface Post {
   id: number;
   title: string;
   body: string;
-  user_id: number;     // Corresponds to the User who authored the post
-  created_at: string;  // ISO Date string
-  updated_at: string;  // ISO Date string
+  user_id: number;
+  published_at: string;
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; 

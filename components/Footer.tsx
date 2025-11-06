@@ -13,7 +13,16 @@ const Footer: React.FC = () => {
           &copy; {currentYear} Ruth Abebe. All rights reserved.
         </p>
         <p className="text-gray-500 text-xs mt-1">
-          Built with Next.js and deployed via Vercel.
+          Built with
+          <a
+            href="https://nextjs.org/"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white-400 hover:text-white-300 transition-colors underline mx-1"
+            aria-label="Open-Meteo website"
+            >
+              Next.js.
+            </a>
         </p>
       </div>
     </footer>

@@ -50,7 +50,7 @@ const CustomH2: FC<HeadingProps> = (props) => {
     // Standardized to !text-2xl for a medium subtitle size.
     return (
         <h2 
-            className="!text-2xl !font-bold text-gray-900 mt-6 mb-3 tracking-tight" 
+            className="!text-2xl !font-bold text-white-900 mt-6 mb-3 tracking-tight" 
             {...(hProps as React.HTMLAttributes<HTMLHeadingElement>)}
         />
     );
@@ -65,7 +65,7 @@ const CustomH1: FC<HeadingProps> = (props) => {
     // NOTE: If you want H1 to be *larger* than H2, change "!text-2xl" to "!text-3xl" or "!text-4xl".
     return (
         <h1 
-            className="!text-2xl !font-bold text-gray-900 mt-8 mb-4 border-b border-gray-300 pb-2 tracking-tight" 
+            className="!text-2xl !font-bold text-white-900 mt-8 mb-4 border-b border-gray-300 pb-2 tracking-tight" 
             {...(hProps as React.HTMLAttributes<HTMLHeadingElement>)}
         />
     );
