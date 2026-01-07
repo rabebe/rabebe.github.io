@@ -17,10 +17,10 @@ const projects = [
     repoUrl: 'https://github.com/rabebe/api-caching-proxy',
   },
   {
-    title: 'Personal Website + Integrated Blog',
-    description: 'A responsive portfolio and blogging platform with a decoupled architecture, combining a robust backend API with a modern frontend. Designed for content management flexibility and automated deployment.',
+    title: 'Integrated Blog',
+    description: 'A responsive blogging platform with a decoupled architecture, combining a robust backend API with a modern frontend. Designed for content management flexibility and automated deployment.',
     stack: ['Ruby on Rails', 'PostgreSQL', 'Next.js', 'Typescript'],
-    liveUrl: '/blog',
+    liveUrl: 'https://blog-frontend-jd7j.vercel.app/',
     repoUrl: 'https://github.com/rabebe/blog-api',
   }
 ];
