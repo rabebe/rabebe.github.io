@@ -28,52 +28,42 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const ContactPage: React.FC = () => {
   
-  // NOTE: Use your actual contact details here
   const myEmail = "ruthgabebe@gmail.com"; 
   const linkedinUrl = "https://linkedin.com/in/ruth-abebe";
   const githubUrl = "https://github.com/rabebe";
 
   return (
-    // Removed bg-gray-50 to inherit dark background
     <main className="min-h-screen py-16 sm:py-24">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <header className="text-center mb-12">
-          {/* Changed text-gray-900 to text-white */}
           <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4">
             Get In Touch
           </h1>
-          {/* Changed text-gray-600 to text-gray-300 */}
           <p className="text-xl text-indigo-400 max-w-2xl mx-auto">
             Feel free to connect directly via these channels.
           </p>
         </header>
 
         {/* Static Contact Info Container */}
-        {/* Changed bg-white to bg-gray-800, border-gray-100 to border-gray-700 */}
         <div className="bg-gray-800 p-8 md:p-12 shadow-2xl rounded-2xl border border-gray-700">
-            {/* Changed text-gray-900 to text-white */}
             <h2 className="text-2xl font-bold text-white mb-8">Direct Contact Methods</h2>
             
             <div className="space-y-8">
                 
                 {/* Email Link */}
-                {/* Changed bg-gray-50 to bg-gray-700, border-gray-200 to border-gray-600 */}
                 <div className="flex items-start p-4 bg-gray-700 rounded-lg border border-gray-600">
                     {/* *** Changed text-teal-400 to text-indigo-400 *** */}
                     <MailIcon className="w-8 h-8 text-indigo-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <div className="ml-4">
-                    {/* Changed text-gray-900 to text-white */}
                     <h3 className="text-lg font-semibold text-white">Email Address</h3>
                     <a 
                         href={`mailto:${myEmail}`} 
-                        // *** Changed text-teal-400/hover:text-teal-300 to indigo ***
                         className="text-indigo-400 hover:text-indigo-300 transition duration-150 break-words font-medium"
                     >
                         {myEmail}
                     </a>
-                    {/* Changed text-gray-500 to text-gray-400 */}
                     <p className="mt-1 text-sm text-gray-400">
                         The best way to reach me for professional inquiries.
                     </p>
@@ -81,7 +71,6 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 {/* Social Media Links */}
-                {/* Changed border-gray-100 to border-gray-700 */}
                 <div className="space-y-4 pt-4 border-t border-gray-700">
                     
                     {/* LinkedIn */}
@@ -89,13 +78,10 @@ const ContactPage: React.FC = () => {
                       href={linkedinUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      // Changed text-gray-700 to text-gray-300, hover:bg-gray-100 to hover:bg-gray-700
                       className="flex items-center text-gray-300 p-3 rounded-lg hover:bg-gray-700 transition duration-150 group"
                     >
-                      {/* *** Changed text-blue-500/group-hover:text-blue-400 to indigo *** */}
                       <LinkedinIcon className="w-6 h-6 mr-4 flex-shrink-0 text-indigo-400 group-hover:text-indigo-300" />
                       <span className="font-medium text-lg">LinkedIn</span>
-                      {/* Changed text-gray-500 to text-gray-400 and *** group-hover:text-teal-400 to indigo *** */}
                       <span className="ml-auto text-base text-gray-400 group-hover:text-indigo-400 group-hover:underline">/ruth-abebe</span>
                     </a>
                     
@@ -104,13 +90,10 @@ const ContactPage: React.FC = () => {
                       href={githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      // Changed text-gray-700 to text-gray-300, hover:bg-gray-100 to hover:bg-gray-700
                       className="flex items-center text-gray-300 p-3 rounded-lg hover:bg-gray-700 transition duration-150 group"
                     >
-                      {/* *** Changed text-white/group-hover:text-white to indigo *** */}
                       <GithubIcon className="w-6 h-6 mr-4 flex-shrink-0 text-indigo-400 group-hover:text-indigo-300" />
                       <span className="font-medium text-lg">GitHub</span>
-                      {/* Changed text-gray-500 to text-gray-400 and *** group-hover:text-teal-400 to indigo *** */}
                       <span className="ml-auto text-base text-gray-400 group-hover:text-indigo-400 group-hover:underline">/rabebe</span>
                     </a>
 
