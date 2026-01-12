@@ -6,7 +6,7 @@ const projects = [
     title: 'Self-Correcting Summarization Agent: RefineBot',
     description: 'An intelligent summarization service that automatically refines and corrects its output through iterative self-evaluation. Exposes a REST API for external integration with real-time processing updates.',
     stack: ['Python', 'LangGraph', 'Flask', 'Gemini API'],
-    liveUrl: 'https://ai-chatbot-83je.onrender.com/',
+    liveUrl: 'https://summarizer-frontend-alpha.vercel.app/',
     repoUrl: 'https://github.com/rabebe/ai-chatbot',
   },
   {
