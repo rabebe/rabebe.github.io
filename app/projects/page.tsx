@@ -7,7 +7,7 @@ const projects = [
     description: 'An intelligent summarization service that automatically refines and corrects its output through iterative self-evaluation. Exposes a REST API for external integration with real-time processing updates.',
     stack: ['Python', 'LangGraph', 'Flask', 'Gemini API'],
     liveUrl: 'https://summarizer-frontend-alpha.vercel.app/',
-    repoUrl: 'https://github.com/rabebe/ai-chatbot',
+    repoUrl: 'https://github.com/rabebe/summarizer-frontend',
   },
   {
     title: 'Full-Stack Caching API Proxy',
@@ -21,7 +21,7 @@ const projects = [
     description: 'A responsive blogging platform with a decoupled architecture, combining a robust backend API with a modern frontend. Designed for content management flexibility and automated deployment.',
     stack: ['Ruby on Rails', 'PostgreSQL', 'Next.js', 'Typescript'],
     liveUrl: 'https://blog-frontend-jd7j.vercel.app/',
-    repoUrl: 'https://github.com/rabebe/blog-api',
+    repoUrl: 'https://github.com/rabebe/blog-frontend',
   }
 ];
 
